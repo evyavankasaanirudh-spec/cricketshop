@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kit & Equipment - Cricket World</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="kit-page">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-gradient">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Cricket World</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="bats.html">Bats</a></li>
+                    <li class="nav-item"><a class="nav-link" href="balls.html">Balls</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="kit.html">Kit & Equipment</a></li>
+                    <li class="nav-item"><a class="nav-link" href="cart.html">Cart <span id="cart-count" class="badge bg-light text-dark">0</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="feedback.html">Feedback</a></li>
+                    <li class="nav-item"><a class="nav-link" href="location.html">Location</a></li>
+                    <li class="nav-item"><button id="theme-toggle" class="btn btn-outline-light ms-3">Toggle Theme</button></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="page-banner">
+        <div class="container text-center text-white">
+            <h1 class="display-4">Kit & Equipment</h1>
+            <p class="lead">Complete cricket gear and protective equipment for players</p>
+        </div>
+    </header>
+
+    <main class="container my-5">
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card product-card h-100">
+                    <img src="./images/Complete Kit.jpg" class="card-img-top" alt="Complete Kit">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">Complete Kit</h5>
+                        <p class="card-text">$399</p>
+                        <button class="btn btn-primary mt-auto" onclick="addToCart({name: 'Complete Kit', price: 399, image: 'images/kit1.jpg'})">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card product-card h-100">
+                    <img src="./images/Batting gloves.jpg" class="card-img-top" alt="Batting Gloves">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">Batting Gloves</h5>
+                        <p class="card-text">$79</p>
+                        <button class="btn btn-primary mt-auto" onclick="addToCart({name: 'Batting Gloves', price: 79, image: 'images/kit2.jpg'})">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card product-card h-100">
+                    <img src="./images/Wicket-keeping gloves.jpg" class="card-img-top" alt="Wicket Keeping Gloves">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">Wicket Keeping Gloves</h5>
+                        <p class="card-text">$99</p>
+                        <button class="btn btn-primary mt-auto" onclick="addToCart({name: 'Wicket Keeping Gloves', price: 99, image: 'images/kit3.jpg'})">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card product-card h-100">
+                    <img src="./images/Helmet.jpg" class="card-img-top" alt="Helmet">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">Helmet</h5>
+                        <p class="card-text">$149</p>
+                        <button class="btn btn-primary mt-auto" onclick="addToCart({name: 'Helmet', price: 149, image: 'images/kit4.jpg'})">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card product-card h-100">
+                    <img src="./images/Pads.jpg" class="card-img-top" alt="Pads">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">Pads</h5>
+                        <p class="card-text">$89</p>
+                        <button class="btn btn-primary mt-auto" onclick="addToCart({name: 'Pads', price: 89, image: 'images/kit5.jpg'})">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card product-card h-100">
+                    <img src="./images/Protective gears.jpg" class="card-img-top" alt="Protective Gear">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">Protective Gear</h5>
+                        <p class="card-text">$199</p>
+                        <button class="btn btn-primary mt-auto" onclick="addToCart({name: 'Protective Gear', price: 199, image: 'images/kit6.jpg'})">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card product-card h-100">
+                    <img src="./images/Thigh guard.jpg" class="card-img-top" alt="Thigh Guard">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">Thigh Guard</h5>
+                        <p class="card-text">$45</p>
+                        <button class="btn btn-primary mt-auto" onclick="addToCart({name: 'Thigh Guard', price: 45, image: 'images/kit7.jpg'})">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card product-card h-100">
+                    <img src="./images/Arm guard.jpg" class="card-img-top" alt="Arm Guard">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">Arm Guard</h5>
+                        <p class="card-text">$35</p>
+                        <button class="btn btn-primary mt-auto" onclick="addToCart({name: 'Arm Guard', price: 35, image: 'images/kit8.jpg'})">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card product-card h-100">
+                    <img src="./images/Abdominal guard.jpg" class="card-img-top" alt="Abdominal Guard">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">Abdominal Guard</h5>
+                        <p class="card-text">$55</p>
+                        <button class="btn btn-primary mt-auto" onclick="addToCart({name: 'Abdominal Guard', price: 55, image: 'images/kit9.jpg'})">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card product-card h-100">
+                    <img src="./images/Chest guard.jpg" class="card-img-top" alt="Chest Guard">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">Chest Guard</h5>
+                        <p class="card-text">$55</p>
+                        <button class="btn btn-primary mt-auto" onclick="addToCart({name: 'Chest Guard', price: 55, image: 'images/kit9.jpg'})">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card product-card h-100">
+                    <img src="./images/Wickets.jpg" class="card-img-top" alt="Wickets">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">Wickets</h5>
+                        <p class="card-text">$29</p>
+                        <button class="btn btn-primary mt-auto" onclick="addToCart({name: 'Wickets', price: 29, image: 'images/kit9.jpg'})">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2023 Cricket World. All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
